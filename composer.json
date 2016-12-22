@@ -1,0 +1,44 @@
+{
+  "name": "matthiasmullie/php-api",
+  "type": "library",
+  "description": "PHP API framework",
+  "keywords": [
+    "php", "api", "skeleton", "framework"
+  ],
+  "homepage": "https://github.com/matthiasmullie/php-api",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Matthias Mullie",
+      "homepage": "http://www.mullie.eu",
+      "email": "php-api@mullie.eu",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "guzzlehttp/psr7": "^1.3",
+    "league/route": "^2.0"
+  },
+  "require-dev": {
+    "cauditor/analyzer": "^1.0",
+    "friendsofphp/php-cs-fixer": "~1.0",
+    "guzzlehttp/guzzle": "^6.2",
+    "phpunit/phpunit": "~4.8",
+    "symfony/yaml": "^3.2"
+  },
+  "suggest": {
+    "symfony/yaml": "Needed to support routes in YAML format"
+  },
+  "autoload": {
+    "psr-4": {
+      "MatthiasMullie\\Api\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MatthiasMullie\\Api\\Tests\\": "tests/",
+      "MatthiasMullie\\Api\\App\\": "app/"
+    }
+  }
+}
