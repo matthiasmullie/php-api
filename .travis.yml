@@ -5,14 +5,19 @@ php:
   - 7.0
   - hhvm
 
+sudo: required
+
+services:
+  - docker
+
 before_script:
   - pip install --user codecov
   - composer self-update && composer install --dev
-
-script:
   - sudo kill -9 `sudo lsof -t -i:80`
   - docker build -t matthiasmullie/php-api .
   - docker run -d -p 80:80 matthiasmullie/php-api
+
+script:
   - ./vendor/bin/phpunit
 
 after_success:
