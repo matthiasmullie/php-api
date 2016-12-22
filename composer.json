@@ -1,7 +1,7 @@
 {
   "name": "matthiasmullie/php-api",
   "type": "library",
-  "description": "PHP API framework",
+  "description": "A neat little framework for creating PHP APIs",
   "keywords": [
     "php", "api", "skeleton", "framework"
   ],
