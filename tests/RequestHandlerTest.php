@@ -4,6 +4,7 @@ namespace MatthiasMullie\Api\Tests;
 
 use MatthiasMullie\Api\Routes\Providers\RouteProviderInterface;
 use MatthiasMullie\Api\Routes\Providers\YamlRouteProvider;
+use MatthiasMullie\Api\TestHelpers\RequestHandlerTestCase;
 
 class RequestHandlerTest extends RequestHandlerTestCase
 {

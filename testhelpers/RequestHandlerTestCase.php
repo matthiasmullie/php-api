@@ -1,6 +1,6 @@
 <?php
 
-namespace MatthiasMullie\Api\Tests;
+namespace MatthiasMullie\Api\TestHelpers;
 
 use GuzzleHttp\Psr7\ServerRequest;
 use MatthiasMullie\Api\RequestHandler;
