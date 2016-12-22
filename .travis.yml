@@ -1,0 +1,19 @@
+language: php
+
+php:
+  - 7.1
+  - 7.0
+  - hhvm
+
+before_script:
+  - pip install --user codecov
+  - composer self-update && composer install --dev
+
+script:
+  - docker build -t matthiasmullie/php-api .
+  - docker run -d -p 80:80 matthiasmullie/php-api
+  - ./vendor/bin/phpunit
+
+after_success:
+  - vendor/bin/cauditor
+  - codecov
