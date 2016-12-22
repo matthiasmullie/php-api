@@ -13,7 +13,7 @@ abstract class RouteProviderTestCase extends PHPUnit_Framework_TestCase
      *
      * @return RouteProviderInterface
      */
-    abstract public function getProvider(string $input) : RouteProviderInterface;
+    abstract public function getProvider(string $input): RouteProviderInterface;
 
     /**
      * @expectedException Exception

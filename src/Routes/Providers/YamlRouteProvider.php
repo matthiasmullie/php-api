@@ -13,6 +13,7 @@ class YamlRouteProvider extends ArrayRouteProvider implements RouteProviderInter
 {
     /**
      * @param string $path Path to route data
+     *
      * @throws Exception
      */
     public function __construct(string $path)

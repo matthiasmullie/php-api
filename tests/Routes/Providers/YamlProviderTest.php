@@ -10,7 +10,7 @@ class YamlProviderTest extends RouteProviderTestCase
     /**
      * {@inheritdoc}
      */
-    public function getProvider(string $input) : RouteProviderInterface
+    public function getProvider(string $input): RouteProviderInterface
     {
         return new YamlRouteProvider(__DIR__."/../Config/Yaml/$input.yml");
     }

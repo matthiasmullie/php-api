@@ -14,5 +14,5 @@ interface RouteProviderInterface
     /**
      * @return Generator
      */
-    public function getRoutes() : Generator;
+    public function getRoutes(): Generator;
 }

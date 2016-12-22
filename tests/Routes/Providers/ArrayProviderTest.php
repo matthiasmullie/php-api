@@ -10,7 +10,7 @@ class ArrayProviderTest extends RouteProviderTestCase
     /**
      * {@inheritdoc}
      */
-    public function getProvider(string $input) : RouteProviderInterface
+    public function getProvider(string $input): RouteProviderInterface
     {
         $array = include __DIR__."/../Config/Array/$input.php";
 

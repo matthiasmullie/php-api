@@ -28,7 +28,7 @@ class ArrayRouteProvider implements RouteProviderInterface
     /**
      * @return Generator
      */
-    public function getRoutes() : Generator
+    public function getRoutes(): Generator
     {
         foreach ($this->routes as $data) {
             yield new Route(
@@ -46,7 +46,7 @@ class ArrayRouteProvider implements RouteProviderInterface
      *
      * @throws Exception
      */
-    protected function getMethods(array $data) : array
+    protected function getMethods(array $data): array
     {
         if (!isset($data['method'])) {
             $serialized = serialize($data);
@@ -63,7 +63,7 @@ class ArrayRouteProvider implements RouteProviderInterface
      *
      * @throws Exception
      */
-    protected function getPath(array $data) : string
+    protected function getPath(array $data): string
     {
         if (!isset($data['path'])) {
             $serialized = serialize($data);
@@ -80,7 +80,7 @@ class ArrayRouteProvider implements RouteProviderInterface
      *
      * @throws Exception
      */
-    protected function getHandler(array $data) : callable
+    protected function getHandler(array $data): callable
     {
         if (!isset($data['handler'])) {
             $serialized = serialize($data);

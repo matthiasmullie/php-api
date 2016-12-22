@@ -25,7 +25,7 @@ abstract class RequestHandlerTestCase extends PHPUnit_Framework_TestCase
     /**
      * @return RouteProviderInterface
      */
-    abstract protected function getRoutes() : RouteProviderInterface;
+    abstract protected function getRoutes(): RouteProviderInterface;
 
     public function setUp()
     {

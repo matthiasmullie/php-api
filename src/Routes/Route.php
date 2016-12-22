@@ -39,7 +39,7 @@ class Route implements RouteInterface
     /**
      * @return string[]
      */
-    public function getMethods() : array
+    public function getMethods(): array
     {
         return $this->methods;
     }
@@ -47,7 +47,7 @@ class Route implements RouteInterface
     /**
      * @return string
      */
-    public function getPath() : string
+    public function getPath(): string
     {
         return $this->path;
     }
@@ -55,7 +55,7 @@ class Route implements RouteInterface
     /**
      * @return callable
      */
-    public function getHandler() : callable
+    public function getHandler(): callable
     {
         return $this->handler;
     }

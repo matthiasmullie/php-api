@@ -42,7 +42,7 @@ class RequestHandler
      *
      * @return ResponseInterface
      */
-    public function route(ServerRequestInterface $request) : ResponseInterface
+    public function route(ServerRequestInterface $request): ResponseInterface
     {
         $response = $this->router->dispatch($request, new Response());
 

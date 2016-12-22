@@ -12,15 +12,15 @@ interface RouteInterface
     /**
      * @return string[]
      */
-    public function getMethods() : array;
+    public function getMethods(): array;
 
     /**
      * @return string
      */
-    public function getPath() : string;
+    public function getPath(): string;
 
     /**
      * @return callable
      */
-    public function getHandler() : callable;
+    public function getHandler(): callable;
 }

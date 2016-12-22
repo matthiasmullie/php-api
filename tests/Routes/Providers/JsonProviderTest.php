@@ -10,7 +10,7 @@ class JsonProviderTest extends RouteProviderTestCase
     /**
      * {@inheritdoc}
      */
-    public function getProvider(string $input) : RouteProviderInterface
+    public function getProvider(string $input): RouteProviderInterface
     {
         return new JsonRouteProvider(__DIR__."/../Config/Json/$input.json");
     }
