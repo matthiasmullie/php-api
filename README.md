@@ -10,9 +10,47 @@
 
 ## Example usage
 
-```php
-@todo add a kickass example!
+Setting up is **really** simple.
+
+You'll need a routing config:
+
+```yml
+test:
+    method: [GET, POST]
+    path: /
+    handler: MatthiasMullie\ApiExample\ExampleController
 ```
+
+A few lines to bootstrap, in a file where all of your requests end up:
+
+```php
+$routes = new MatthiasMullie\Api\Routes\Providers\YamlRouteProvider(__DIR__.'/../config/routes.yml');
+$handler = new MatthiasMullie\Api\RequestHandler($routes);
+$response = $handler->route(GuzzleHttp\Psr7\ServerRequest::fromGlobals());
+$handler->output($response);
+```
+
+And a controller:
+
+```php
+namespace MatthiasMullie\ApiExample;
+
+class ExampleController implements MatthiasMullie\Api\Controllers\ControllerInterface
+{
+    public function __invoke(Psr\Http\Message\ServerRequestInterface $request, array $args)
+    {
+        // hey there, I can process your request!
+
+        return [
+            'status_code' => 200,
+            'hello' => 'world',
+        ];
+    }
+}
+```
+
+Or take a look at this exact same example in a clean repo, at
+[matthiasmullie/php-api-example](https://github.com/matthiasmullie/php-api-example).
 
 
 ## Installation
