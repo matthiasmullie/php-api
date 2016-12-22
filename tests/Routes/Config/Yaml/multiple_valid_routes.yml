@@ -1,0 +1,9 @@
+one:
+    method: [GET,POST]
+    path: /test
+    handler: MatthiasMullie\Api\Tests\Controllers\TestController
+
+two:
+    method: GET
+    path: /another_test/{arg}
+    handler: MatthiasMullie\Api\Tests\Controllers\TestController
