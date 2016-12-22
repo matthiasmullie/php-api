@@ -1,0 +1,9 @@
+test:
+    method: [GET, POST]
+    path: /
+    handler: MatthiasMullie\Api\App\ExampleController
+
+another_test:
+    method: GET
+    path: /hello/{name}
+    handler: MatthiasMullie\Api\App\ExampleController
