@@ -10,6 +10,7 @@ before_script:
   - composer self-update && composer install --dev
 
 script:
+  - sudo kill -9 `sudo lsof -t -i:80`
   - docker build -t matthiasmullie/php-api .
   - docker run -d -p 80:80 matthiasmullie/php-api
   - ./vendor/bin/phpunit
