@@ -43,8 +43,10 @@ formatting for you:
 
 ```sh
 vendor/bin/php-cs-fixer fix src
+vendor/bin/php-cs-fixer fix testhelpers
 vendor/bin/php-cs-fixer fix tests
-vendor/bin/php-cs-fixer fix www
+vendor/bin/php-cs-fixer fix app
+vendor/bin/php-cs-fixer fix html
 ```
 
 Document the code thoroughly!
