@@ -28,7 +28,7 @@ Please include tests for every change or addition to the code.
 To run the complete test suite:
 
 ```sh
-vendor/bin/phpunit
+make test
 ```
 
 When submitting a new pull request, please make sure that that the test suite
