@@ -22,7 +22,6 @@
     "league/route": "^2.0"
   },
   "require-dev": {
-    "cauditor/analyzer": "^1.0",
     "friendsofphp/php-cs-fixer": "~1.0",
     "phpunit/phpunit": "~4.8",
     "symfony/yaml": "^3.2"
