@@ -1,0 +1,12 @@
+version: '2.1'
+services:
+  client:
+    image: '7.2-client'
+    build:
+      args:
+        version: 7.2-apache
+  server:
+    image: '7.2-server'
+    build:
+      args:
+        version: 7.2-apache

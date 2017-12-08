@@ -4,9 +4,9 @@ namespace MatthiasMullie\Api\Tests\Routes;
 
 use MatthiasMullie\Api\Routes\Route;
 use MatthiasMullie\Api\Tests\Controllers\TestController;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class RouteTest extends PHPUnit_Framework_TestCase
+class RouteTest extends TestCase
 {
     public function testOneMethod()
     {

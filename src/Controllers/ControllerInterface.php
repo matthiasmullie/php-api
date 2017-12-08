@@ -15,11 +15,12 @@ interface ControllerInterface
 {
     /**
      * @param ServerRequestInterface $request
+     * @param ResponseInterface      $response
      * @param array                  $args
      *
      * @return array|ResponseInterface
      *
      * @throws Exception
      */
-    public function __invoke(ServerRequestInterface $request, array $args);
+    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args);
 }

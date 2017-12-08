@@ -5,7 +5,7 @@ namespace MatthiasMullie\Api\TestHelpers;
 use GuzzleHttp\Psr7\ServerRequest;
 use MatthiasMullie\Api\RequestHandler;
 use MatthiasMullie\Api\Routes\Providers\RouteProviderInterface;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -15,7 +15,7 @@ use Psr\Http\Message\ResponseInterface;
  * test through HttpTest, to make sure bootstrapping is fine. But for testing
  * controller logic, this is going to be faster!
  */
-abstract class RequestHandlerTestCase extends PHPUnit_Framework_TestCase
+abstract class RequestHandlerTestCase extends TestCase
 {
     /**
      * @var RequestHandler

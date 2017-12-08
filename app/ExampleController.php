@@ -2,7 +2,8 @@
 
 namespace MatthiasMullie\Api\App;
 
-use MatthiasMullie\Api\Controllers\ControllerInterface;
+use MatthiasMullie\Api\Controllers\JsonController;
+use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 /**
@@ -10,12 +11,12 @@ use Psr\Http\Message\ServerRequestInterface;
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved
  * @license LICENSE MIT
  */
-class ExampleController implements ControllerInterface
+class ExampleController extends JsonController
 {
     /**
      * {@inheritdoc}
      */
-    public function __invoke(ServerRequestInterface $request, array $args)
+    public function invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
     {
         // output the data that was received by various methods
         $data = [
@@ -26,7 +27,7 @@ class ExampleController implements ControllerInterface
 
         return [
             'status_code' => 200,
-            'data' => array_filter($data),
+            'data' => array_filter($data)
         ];
     }
 }

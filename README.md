@@ -35,9 +35,9 @@ And a controller:
 ```php
 namespace MatthiasMullie\ApiExample;
 
-class ExampleController implements MatthiasMullie\Api\Controllers\ControllerInterface
+class ExampleController implements MatthiasMullie\Api\Controllers\JsonController
 {
-    public function __invoke(Psr\Http\Message\ServerRequestInterface $request, array $args)
+    public function __invoke(Psr\Http\Message\ServerRequestInterface $request, ResponseInterface $response, array $args)
     {
         // hey there, I can process your request!
 

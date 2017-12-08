@@ -4,9 +4,9 @@ namespace MatthiasMullie\Api\Tests\Routes\Providers;
 
 use MatthiasMullie\Api\Routes\Providers\Exception;
 use MatthiasMullie\Api\Routes\Providers\RouteProviderInterface;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-abstract class RouteProviderTestCase extends PHPUnit_Framework_TestCase
+abstract class RouteProviderTestCase extends TestCase
 {
     /**
      * @param string $input

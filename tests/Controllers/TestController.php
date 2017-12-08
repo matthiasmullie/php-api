@@ -3,6 +3,7 @@
 namespace MatthiasMullie\Api\Tests\Controllers;
 
 use MatthiasMullie\Api\Controllers\ControllerInterface;
+use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 /**
@@ -15,18 +16,19 @@ class TestController implements ControllerInterface
     /**
      * {@inheritdoc}
      */
-    public function __invoke(ServerRequestInterface $request, array $args)
+    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
     {
-        return static::handle($request, $args);
+        return static::handle($request, $response, $args);
     }
 
     /**
      * @param ServerRequestInterface $request
+     * @param ResponseInterface      $response
      * @param array                  $args
      *
      * @return array
      */
-    public static function handle(ServerRequestInterface $request, array $args)
+    public static function handle(ServerRequestInterface $request, ResponseInterface $response, array $args)
     {
         return [
             'GET' => $request->getQueryParams(),

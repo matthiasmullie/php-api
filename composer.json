@@ -24,7 +24,7 @@
   "require-dev": {
     "friendsofphp/php-cs-fixer": "~2.0",
     "phpunit/phpunit": "~6.0",
-    "symfony/yaml": "^4.0"
+    "symfony/yaml": "^3.2|^4.0"
   },
   "suggest": {
     "symfony/yaml": "Needed to support routes in YAML format"

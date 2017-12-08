@@ -1,0 +1,30 @@
+version: '2.1'
+services:
+  client:
+    build:
+      context: .
+      dockerfile: tests/Docker/Dockerfile
+      args:
+        version: 7-apache
+    volumes:
+      - ./app:/var/www/app
+      - ./config:/var/www/config
+      - ./src:/var/www/src
+      - ./testhelpers:/var/www/testhelpers
+      - ./tests:/var/www/tests
+      - ./build:/var/www/build
+      - ./phpunit.xml.dist:/var/www/phpunit.xml.dist
+    depends_on:
+      server:
+        condition: service_started
+  server:
+    build:
+      context: .
+      dockerfile: tests/Docker/Dockerfile
+      args:
+        version: 7-apache
+    volumes:
+      - ./app:/var/www/app
+      - ./config:/var/www/config
+      - ./html:/var/www/html
+      - ./src:/var/www/src

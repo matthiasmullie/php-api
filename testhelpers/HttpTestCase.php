@@ -4,7 +4,7 @@ namespace MatthiasMullie\Api\TestHelpers;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -14,7 +14,7 @@ use Psr\Http\Message\ResponseInterface;
  * of these just to verify the bootstrapping. RequestHandlerTestCase can then
  * be used to test the controller logic.
  */
-abstract class HttpTestCase extends PHPUnit_Framework_TestCase
+abstract class HttpTestCase extends TestCase
 {
     /**
      * @var Client
@@ -24,7 +24,7 @@ abstract class HttpTestCase extends PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->client = new Client([
-            'base_uri' => 'http://localhost',
+            'base_uri' => 'http://server',
         ]);
     }
 
