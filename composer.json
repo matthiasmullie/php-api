@@ -10,7 +10,7 @@
   "authors": [
     {
       "name": "Matthias Mullie",
-      "homepage": "http://www.mullie.eu",
+      "homepage": "https://www.mullie.eu",
       "email": "php-api@mullie.eu",
       "role": "Developer"
     }
@@ -19,12 +19,12 @@
     "php": "^7.0",
     "guzzlehttp/guzzle": "^6.2",
     "guzzlehttp/psr7": "^1.3",
-    "league/route": "^2.0"
+    "league/route": "^3.0"
   },
   "require-dev": {
-    "friendsofphp/php-cs-fixer": "~1.0",
-    "phpunit/phpunit": "~4.8",
-    "symfony/yaml": "^3.2"
+    "friendsofphp/php-cs-fixer": "~2.0",
+    "phpunit/phpunit": "~6.0",
+    "symfony/yaml": "^4.0"
   },
   "suggest": {
     "symfony/yaml": "Needed to support routes in YAML format"
