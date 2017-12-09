@@ -3,6 +3,7 @@
 namespace MatthiasMullie\Api\Tests\Controllers;
 
 use MatthiasMullie\Api\Controllers\ControllerInterface;
+use MatthiasMullie\Api\Controllers\JsonController;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -11,12 +12,12 @@ use Psr\Http\Message\ServerRequestInterface;
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved
  * @license LICENSE MIT
  */
-class TestController implements ControllerInterface
+class TestController extends JsonController
 {
     /**
      * {@inheritdoc}
      */
-    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
+    public function invoke(ServerRequestInterface $request, ResponseInterface $response, array $args): array
     {
         return static::handle($request, $response, $args);
     }
@@ -28,7 +29,7 @@ class TestController implements ControllerInterface
      *
      * @return array
      */
-    public static function handle(ServerRequestInterface $request, ResponseInterface $response, array $args)
+    public static function handle(ServerRequestInterface $request, ResponseInterface $response, array $args): array
     {
         return [
             'GET' => $request->getQueryParams(),

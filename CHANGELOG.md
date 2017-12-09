@@ -1,6 +1,11 @@
 # Changelog
 
 
+## [1.0.1] - 2017-12-10
+### Changed
+- Add missing return value type hints
+
+
 ## [1.0.0] - 2017-12-08
 ### Added
 - A neat little framework for creating PHP APIs

@@ -16,7 +16,7 @@ class ExampleController extends JsonController
     /**
      * {@inheritdoc}
      */
-    public function invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
+    public function invoke(ServerRequestInterface $request, ResponseInterface $response, array $args): array
     {
         // output the data that was received by various methods
         $data = [

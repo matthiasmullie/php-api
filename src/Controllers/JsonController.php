@@ -18,16 +18,16 @@ abstract class JsonController implements ControllerInterface
      * @param ResponseInterface      $response
      * @param array                  $args
      *
-     * @return array|ResponseInterface
+     * @return array
      *
      * @throws Exception
      */
-    abstract public function invoke(ServerRequestInterface $request, ResponseInterface $response, array $args);
+    abstract public function invoke(ServerRequestInterface $request, ResponseInterface $response, array $args): array;
 
     /**
      * {@inheritdoc}
      */
-    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args)
+    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
     {
         $result = $this->invoke($request, $response, $args);
 
